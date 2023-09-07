@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+    <!-- Add Bootstrap CSS link -->
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Add your custom CSS here -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-md navbar-primary bg-primary">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                   <img src="images/logozx.png" alt="" width="80px">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="input-container">
+                    <input type="text" name="text" class="input" placeholder="search...">
+                    <span class="icon">
+                      <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </span>
+                  </div>
+
+
+
+                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav">
+                <!-- <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">HOME <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="list.html">SHOPPING LIST</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="clasic.html">CLASIC</a>
+                                <a class="dropdown-item" href="sport.html">SPORTR</a>
+                                <a class="dropdown-item" href="super.html">SUPER</a>
+                            </div>
+                        </li>
+
+                        <button class="btn" onclick="location.href='login.html'"> LOGIN :)
+                        </button>
+                    </ul>
+
+                </div>
+          </div>
+        </nav>
+    <!-- Content Section -->
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="cta">
+                <h1>SPORT CARS NISSAN</h1>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/564x/f5/66/14/f56614d1e6d639d8b5f4fb9adbe18d23.jpg" class="card-img-top" alt="Product 1" >
+                    <div class="card-body">
+                        <h5 class="card-title">Nissan GT-R R35</h5>
+                        <p class="card-text">$999.99</p>
+                        <a id="birman"  onclick="tambahKeKeranjang('Nissan GT-R R35', 999.99, 'https://i.pinimg.com/564x/f5/66/14/f56614d1e6d639d8b5f4fb9adbe18d23.jpg')" class="btn btn-primary">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="https://www.hdwallpapers.in/download/nissan_370z_nissan_car_sports_car_white_4k_hd-HD.jpg" class="card-img-top" alt="Product 1">
+                  <div class="card-body">
+                      <h5 class="card-title">NISSAN 370Z</h5>
+                      <p class="card-text">$100,000,666</p>
+                      <a id="coon"  onclick="tambahKeKeranjang('NISSAN 370Z', 108.000, 'https://www.hdwallpapers.in/download/nissan_370z_nissan_car_sports_car_white_4k_hd-HD.jpg')" class="btn btn-primary">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://wallpapercave.com/wp/wp4455373.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">NISSAN GT-R R34</h5>
+                    <p class="card-text">$99.990,000</p>
+                    <a href="#"  onclick="tambahKeKeranjang('NISSAN GT-R R34', 9.900, 'https://wallpapercave.com/wp/wp4455373.jpg')" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
+            <h1>SPORT CARS TOYOTA</h1>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.9UGMy5--0LI4Gxeopyd0oAHaEK&pid=Api&P=0&h=180" class="card-img-top" alt="Product 1">
+              <div class="card-body">
+                  <h5 class="card-title">TOYOTA SUPRA MK4</h5>
+                  <p class="card-text">$99.99</p>
+                  <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/78/98/cd/7898cd80beece4a7b6c44adc50a1a430.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Toyota GT86</h5>
+                <p class="card-text">$99.99</p>
+                <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+          <img src="https://i.pinimg.com/736x/e0/ad/97/e0ad975f5531fd5d890ca2675c0b3bf8.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+              <h5 class="card-title">Toyota Supra MK5</h5>
+              <p class="card-text">$99.99</p>
+              <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+          </div>
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+      <h1>SPORT CARS BMW</h1>
+     
+  <div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="http://www.autotribute.com/wp-content/gallery/bmw-i8-plug-in-hybrid-sports-car/bmw-i8-supercar-front-motion.jpg" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+            <h5 class="card-title">BMW I8</h5>
+            <p class="card-text">$5.939,222</p>
+            <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="card">
+      <img src="https://www.dailymaverick.co.za/wp-content/uploads/Deon_BMW-Z4-and-M850i_21-MAIN-option-2.jpg" class="card-img-top" alt="Product 1">
+      <div class="card-body">
+          <h5 class="card-title">BMW Z4</h5>
+          <p class="card-text">$99.993.333</p>
+          <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card">
+    <img src="http://www.superiorwallpapers.com/download/tuning-bmw-m6-white-sport-car-3840x2160.jpg" class="card-img-top" alt="Product 1">
+    <div class="card-body">
+        <h5 class="card-title">BMW M6</h5>
+        <p class="card-text">$99.935,779</p>
+        <a href="#"  onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            &copy; 2023 Zex Vinz. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  
+
+<script>
+    var tombolTambah = document.querySelectorAll('coon');
+
+    for (var i = 0; i < tombolTambah.length; i++) {
+        tombolTambah[i].addEventListener('click', function(event) {
+            var produkElement = event.target.parentElement;
+            var produkHtml = produkElement.innerHTML;
+
+            // Simpan informasi produk ke session storage
+            sessionStorage.setItem('produk', produkHtml);
+
+            // Arahkan ke halaman kedua
+            window.location.href = 'list.html';
+        });
+    }
+</script>
+
+</body>
+</html>

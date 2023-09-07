@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+    <!-- Add Bootstrap CSS link -->
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Add your custom CSS here -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-md navbar-primary bg-primary">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                   <img src="images/logozx.png" alt="" width="80px">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="input-container">
+                    <input type="text" name="text" class="input" placeholder="search...">
+                    <span class="icon">
+                      <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </span>
+                  </div>
+
+
+
+                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav">
+                <!-- <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">HOME <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="list.html">SHOPPING LIST</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="clasic.html">CLASIC</a>
+                                <a class="dropdown-item" href="sport.html">SPORTR</a>
+                                <a class="dropdown-item" href="super.html">SUPER</a>
+                            </div>
+                        </li>
+
+                        <button class="btn" onclick="location.href='login.html'"> LOGIN :)
+                        </button>
+                    </ul>
+
+                </div>
+          </div>
+        </nav>
+    <!-- Content Section -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halaman Keranjang</title>
+        <style>
+            /* Styles untuk tampilan halaman keranjang */
+           
+            .konn {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            .product {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+            }
+            .product img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            .product-info {
+                flex-grow: 1;
+            }
+            .total {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="konn">
+        <center>
+            <h2>Keranjang Belanja</h2>
+        </center>
+            <div id="keranjang-items">
+                <!-- Daftar produk dalam keranjang akan ditampilkan di sini menggunakan JavaScript -->
+            </div>
+            <div class="total" id="total-harga">
+                <!-- Total harga dari seluruh keranjang akan ditampilkan di sini menggunakan JavaScript -->
+            </div>
+        </div>
+    
+        <script>
+            // Mengambil data keranjang dari localStorage
+            var keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+    
+            // Fungsi untuk menampilkan detail keranjang
+            function tampilkanKeranjang() {
+                var keranjangItems = document.getElementById('keranjang-items');
+                var totalHargaDiv = document.getElementById('total-harga');
+                var totalHarga = 0;
+    
+                // Hapus konten keranjang sebelum menambahkannya kembali
+                keranjangItems.innerHTML = '';
+    
+                keranjang.forEach(function (produk) {
+                    var produkDiv = document.createElement('div');
+                    produkDiv.classList.add('product');
+    
+                    var gambar = document.createElement('img');
+                    gambar.src = produk.gambar;
+                    gambar.alt = produk.nama;
+    
+                    var infoDiv = document.createElement('div');
+                    infoDiv.classList.add('product-info');
+                    infoDiv.innerHTML = `
+                        <h3>${produk.nama}</h3>
+                        <p>Harga: $${produk.harga.toFixed(2)}</p>
+                    `;
+    
+                    produkDiv.appendChild(gambar);
+                    produkDiv.appendChild(infoDiv);
+                    keranjangItems.appendChild(produkDiv);
+    
+                    // Hitung total harga dari seluruh produk dalam keranjang
+                    totalHarga += produk.harga;
+                });
+    
+                // Tampilkan total harga
+                totalHargaDiv.textContent = `Total Harga: $${totalHarga.toFixed(2)}`;
+            }
+    
+            // Tampilkan detail keranjang saat halaman dimuat
+            tampilkanKeranjang();
+        </script>
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            &copy; 2023 Zex Vinz. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  
+
+
+
+</body>
+</html>

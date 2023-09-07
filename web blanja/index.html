@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+    <!-- Add Bootstrap CSS link -->
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Add your custom CSS here -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-md navbar-primary bg-primary">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                   <img src="images/logozx.png" alt="" width="80px">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="input-container">
+                    <input type="text" name="text" class="input" placeholder="search...">
+                    <span class="icon">
+                      <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </span>
+                  </div>
+
+
+
+                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav">
+                <!-- <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0"> -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">HOME <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="list.html">SHOPPING LIST</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="clasic.html">CLASIC</a>
+                                <a class="dropdown-item" href="sport.html">SPORT</a>
+                                <a class="dropdown-item" href="super.html">SUPER</a>
+                            </div>
+                        </li>
+
+                        <button class="btn" onclick="location.href='login.html'"> LOGIN :)
+                        </button>
+                    </ul>
+
+                </div>
+          </div>
+        </nav>
+    <!-- Header Section with Self-Sliding  -->
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="video1.mp4" type="video/mp4" >
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted >
+                    <source src="video4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay loop muted>
+                    <source src="video6.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Content Section -->
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="cta">
+                <h1>CLASIC CARS </h1>
+                <button onclick="location.href='clasic.html'">
+                    <span class="hover-underline-animation"> Show More </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://otoblitz.net/wp-content/uploads/2018/05/01_Shelby_Mustang_GT500_tahun_1967.jpg" class="card-img-top" alt="Product 1" >
+                    <div class="card-body">
+                        <h5 class="card-title">Shelby Mustang GT500 1967</h5>
+                        <p class="card-text">$99.99</p>
+                        <a id="birman" onclick="tambahKeKeranjang('Shelby Mustang GT500 1967', 99.99, 'https://otoblitz.net/wp-content/uploads/2018/05/01_Shelby_Mustang_GT500_tahun_1967.jpg')" class="btn btn-primary">Add to Cart</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg" class="card-img-top" alt="Product 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Elang Spyder GT</h5>
+                      <p class="card-text">$108.000</p>
+                      <a id="coon" onclick="tambahKeKeranjang('Elang Spyder GT', 108.000, 'https://i.pinimg.com/564x/73/fd/f5/73fdf54c06e2f018b2a2ca4cfa7ec562.jpg')" class="btn btn-primary">Add to Cart</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://i.pinimg.com/564x/39/be/92/39be92796253271924285dca515368a3.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Spydercar Elan</h5>
+                    <p class="card-text">$99.990</p>
+                    <a href="#" onclick="tambahKeKeranjang('Spydercar Elan', 99.990, 'https://i.pinimg.com/564x/39/be/92/39be92796253271924285dca515368a3.jpg')" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="cta">
+            <h1>SPORT CARS </h1>
+            <button onclick="location.href='sport.html'">
+                <span class="hover-underline-animation"> Show More </span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="https://i.pinimg.com/564x/f5/66/14/f56614d1e6d639d8b5f4fb9adbe18d23.jpg" class="card-img-top" alt="Product 1">
+              <div class="card-body">
+                  <h5 class="card-title">Nissan GT-R 35</h5>
+                  <p class="card-text">$99.99</p>
+                  <a href="#" onclick="tambahKeKeranjang('Nissan GT-R 35', 99.99, 'https://i.pinimg.com/564x/f5/66/14/f56614d1e6d639d8b5f4fb9adbe18d23.jpg')" class="btn btn-primary">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/78/98/cd/7898cd80beece4a7b6c44adc50a1a430.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Toyota GT86</h5>
+                <p class="card-text">$309.909</p>
+                <a href="#" onclick="tambahKeKeranjang('Toyota GT86', 309.909, 'https://i.pinimg.com/564x/78/98/cd/7898cd80beece4a7b6c44adc50a1a430.jpg')" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+          <img src="https://i.pinimg.com/736x/e0/ad/97/e0ad975f5531fd5d890ca2675c0b3bf8.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+              <h5 class="card-title">Toyota Supra MK5</h5>
+              <p class="card-text">$909.919</p>
+              <a href="#" onclick="tambahKeKeranjang('Toyota Supra MK5', 909.919, 'https://i.pinimg.com/736x/e0/ad/97/e0ad975f5531fd5d890ca2675c0b3bf8.jpg')" class="btn btn-primary">Add to Cart</a>
+          </div>
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="cta">
+      <h1>SUPER CARS </h1>
+      <button onclick="location.href='super.html'">
+          <span class="hover-underline-animation"> Show More </span>
+          <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+              <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+          </svg>
+      </button>
+  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="https://i.pinimg.com/564x/a1/1d/56/a11d5651c939a50511a42801d2ce620a.jpg" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+            <h5 class="card-title">Pagano Zonda HP Barchetta</h5>
+            <p class="card-text">$709.949</p>
+            <a href="#" onclick="tambahKeKeranjang('Pagano Zonda HP Barchetta', 709.949, 'https://i.pinimg.com/564x/a1/1d/56/a11d5651c939a50511a42801d2ce620a.jpg')" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="card">
+      <img src="https://i.pinimg.com/564x/43/05/80/4305800673af7983ea6f068dd2032814.jpg" class="card-img-top" alt="Product 1">
+      <div class="card-body">
+          <h5 class="card-title">Bugatti Divo. 5.9.</h5>
+          <p class="card-text">$991.919</p>
+          <a href="#" onclick="tambahKeKeranjang('Bugatti Divo. 5.9', 991.919, 'https://i.pinimg.com/564x/43/05/80/4305800673af7983ea6f068dd2032814.jpg')" class="btn btn-primary">Add to Cart</a>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card">
+    <img src="https://i.pinimg.com/564x/04/a9/2c/04a92cc609011961d4c7d2dc73de9c29.jpg" class="card-img-top" alt="Product 1">
+    <div class="card-body">
+        <h5 class="card-title">Dodge Viper</h5>
+        <p class="card-text">$99.99</p>
+        <a href="#" onclick="tambahKeKeranjang('Dodge Viper', 99.99, 'https://i.pinimg.com/564x/04/a9/2c/04a92cc609011961d4c7d2dc73de9c29.jpg')" class="btn btn-primary">Add to Cart</a>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container text-center">
+            &copy; 2023 Your Store. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  
+
+<!-- slide video -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+ 
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const slideWidth = slides[0].clientWidth;
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateX = -currentIndex * slideWidth;
+            slider.style.transform = `translateX(${translateX}px)`;
+        }
+
+        setInterval(nextSlide, 5000); // Ganti 5000 dengan interval yang Anda inginkan (dalam milidetik)
+
+</script>
+
+<script>
+    // Fungsi untuk menambahkan produk ke dalam keranjang
+    function tambahKeKeranjang(nama, harga, gambar) {
+        // Mendapatkan data keranjang dari localStorage atau membuat keranjang kosong jika belum ada
+        var keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+
+        // Menambahkan produk yang dipilih ke dalam keranjang
+        keranjang.push({ nama: nama, harga: harga, gambar: gambar });
+
+        // Menyimpan data keranjang yang diperbarui di localStorage
+        localStorage.setItem('keranjang', JSON.stringify(keranjang));
+
+        // Redirect ke halaman keranjang
+        window.location.href = 'list.html';
+    }
+</script>
+</body>
+</html>
