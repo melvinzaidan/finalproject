@@ -202,20 +202,20 @@
   </script>
   
 
-<script>
-    var tombolTambah = document.querySelectorAll('coon');
+  <script>
+    // Fungsi untuk menambahkan produk ke dalam keranjang
+    function tambahKeKeranjang(nama, harga, gambar) {
+        // Mendapatkan data keranjang dari localStorage atau membuat keranjang kosong jika belum ada
+        var keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
 
-    for (var i = 0; i < tombolTambah.length; i++) {
-        tombolTambah[i].addEventListener('click', function(event) {
-            var produkElement = event.target.parentElement;
-            var produkHtml = produkElement.innerHTML;
+        // Menambahkan produk yang dipilih ke dalam keranjang
+        keranjang.push({ nama: nama, harga: harga, gambar: gambar });
 
-            // Simpan informasi produk ke session storage
-            sessionStorage.setItem('produk', produkHtml);
+        // Menyimpan data keranjang yang diperbarui di localStorage
+        localStorage.setItem('keranjang', JSON.stringify(keranjang));
 
-            // Arahkan ke halaman kedua
-            window.location.href = 'list.html';
-        });
+        // Redirect ke halaman keranjang
+        window.location.href = 'list.html';
     }
 </script>
 
